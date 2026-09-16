@@ -1,6 +1,6 @@
-# mysql4
+# produtos-crud-mysql
 
-Aplicação CRUD simples feita com Node.js, Express, Handlebars e Sequelize, usando um banco MySQL hospedado no [filess.io](https://filess.io). Permite cadastrar/editar/excluir produtos e receber mensagens de um formulário "Fale Conosco".
+Aplicação CRUD simples feita com Node.js, Express, Handlebars e Sequelize, usando um banco MySQL hospedado no [filess.io](https://filess.io). Permite cadastrar, editar e excluir produtos.
 
 ## Stack
 
@@ -14,15 +14,12 @@ Aplicação CRUD simples feita com Node.js, Express, Handlebars e Sequelize, usa
 ```
 ├── index.js                  # bootstrap do Express, engine de views e rotas
 ├── controllers/
-│   ├── produtoController.js  # CRUD de produtos
-│   └── faleController.js     # envio de mensagens (fale conosco)
+│   └── produtoController.js  # CRUD de produtos
 ├── models/
 │   ├── db.js                 # conexão Sequelize (usa variáveis de ambiente)
-│   ├── produto.js            # modelo Produtos
-│   └── faleConosco.js        # modelo FaleConosco
+│   └── produto.js            # modelo Produtos
 ├── routes/
-│   ├── produtoRoutes.js      # /produtos
-│   └── faleRoutes.js         # /fale
+│   └── produtoRoutes.js      # /produtos
 └── views/                    # templates Handlebars
 ```
 
@@ -37,8 +34,6 @@ Aplicação CRUD simples feita com Node.js, Express, Handlebars e Sequelize, usa
 | GET    | `/produtos/edit/:id`  | Formulário de edição              |
 | POST   | `/produtos/edit/:id`  | Atualiza um produto                |
 | POST   | `/produtos/delete/:id`| Remove um produto                  |
-| GET    | `/fale/new`           | Formulário de contato              |
-| POST   | `/fale/new`           | Envia uma mensagem de contato      |
 
 ## Pré-requisitos
 
@@ -70,7 +65,7 @@ Aplicação CRUD simples feita com Node.js, Express, Handlebars e Sequelize, usa
    node index.js
    ```
 
-   O servidor sobe em `http://localhost:8081` (ou na porta definida em `PORT`). As tabelas `produtos` e `faleConosco` são criadas automaticamente no banco na primeira execução (`sequelize.sync`).
+   O servidor sobe em `http://localhost:8081` (ou na porta definida em `PORT`). A tabela `produtos` é criada automaticamente no banco na primeira execução (`sequelize.sync`).
 
 ## Deploy
 

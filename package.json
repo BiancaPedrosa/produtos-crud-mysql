@@ -1,5 +1,5 @@
 {
-  "name": "mysql3",
+  "name": "produtos-crud-mysql",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "biancapedrosa/nodeifsp/mysql3"
+    "url": "github:BiancaPedrosa/mysql4"
   },
   "keywords": [
     "nodejs",
@@ -16,7 +16,7 @@
   ],
   "author": "Bianca Pedrosa",
   "license": "ISC",
-  "description": "",
+  "description": "CRUD de produtos com Express, Handlebars e Sequelize/MySQL.",
   "dependencies": {
     "body-parser": "^2.2.0",
     "dotenv": "^17.2.0",

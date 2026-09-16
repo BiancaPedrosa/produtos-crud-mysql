@@ -3,7 +3,6 @@ import express from 'express';
 import { engine } from 'express-handlebars';
 import bodyParser from 'body-parser';
 import produtoRoutes from './routes/produtoRoutes.js'; // Import your product routes
-import faleRoutes from './routes/faleRoutes.js'; // Import your faleConosco routes
 import 'dotenv/config'; // For ES Modules (if your app uses "type": "module" in package.json)
 const app = express();
 
@@ -20,9 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // --- ROUTES ---
-// Mount the routes under the /produtos ou /fale  path
+// Mount the routes under the /produtos path
 app.use('/produtos', produtoRoutes);
-app.use('/fale', faleRoutes);
 
 // Simple home route (if you still want one)
 app.get('/', (req, res) => {
