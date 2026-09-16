@@ -1,13 +1,13 @@
 // This code connects to a MySQL database and performs a simple query.  
-import { createConnection } from "mysql2";
+var mysql = require("mysql2");
 
-var hostname = "2cq0zk.h.filess.io";
-var database = "restaurante_weshallwon";
-var port = "3307";
-var username = "restaurante_weshallwon";
-var password = "bc3c0b1e9910da438490f4880a22b9756363c795";
+var hostname = "5i47pm.h.filess.io";
+var database = "Restaurante_greatestof";
+var port = "61032";
+var username = "Restaurante_greatestof";
+var password = "0ea487585374eea969d63e6d7ddf2b7cee2c603c";
 
-var con = createConnection({
+var con = mysql.createConnection({
   host: hostname,
   user: username,
   password,
